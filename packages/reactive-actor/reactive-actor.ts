@@ -1,8 +1,6 @@
 import { Actor } from './reactive.js';
 import { ReactiveHub } from './reactive-hub.js';
 
-import { LitElement } from 'lit';
-
 export abstract class ReactiveActor extends HTMLElement implements Actor {
 
   private hubs: ReactiveHub[] = [];
