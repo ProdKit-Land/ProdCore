@@ -1,0 +1,66 @@
+{
+  "name": "prodcore",
+  "version": "0.0.1",
+  "description": "An Event-Data-based Web Component Framework",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ProdKit-Land/ProdCore/"
+  },
+  "author": {
+    "name": "ProdKit",
+    "url": "http://prodkit.land/"
+  },
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "Event",
+    "Data",
+    "WebComponent",
+    "CustomElement",
+    "Framework",
+    "typescript",
+    "javascript",
+    "Web",
+    "Development",
+    "Production"
+  ],
+  "type": "module",
+  "main": ".dist/index.js",
+  "browser": "",
+  "types": "types/types.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "comit": "",
+    "build": "node ./build.js",
+    "compile": "",
+    "lint": "",
+    "format": "",
+    "generate:types": "",
+    "live": "",
+    "watch": "",
+    "preview": "",
+    "test": "",
+    "pre-release": "",
+    "release": "",
+    "clean": "rm -rf dist/",
+    "reset:repo": "git clean -f -X -d"
+  },
+  "release": {
+    "branches": ["main"]
+  },
+  "dependencies": {
+    "esbuild": "0.17.19"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
+    "eslint": "^8.40.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-no-only-tests": "^3.1.0",
+    "prettier": "2.8.8",
+    "typescript": "^5.0.4"
+  }
+}
