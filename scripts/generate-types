@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+# extract d.ts files using typescript
+tsc --project tsconfig.types.json
+
+# bundle them with esbuild
+
+# remove temporary files
+rm -rf ./dist/types
+
+# copy ProdCode required namespaces
+cp ....d.ts dist/
