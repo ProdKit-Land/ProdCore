@@ -2,7 +2,7 @@
 set -e
 
 # extract d.ts files using typescript
-tsc --project tsconfig.types.json
+tsc --project tsconfig.json
 
 # bundle them with esbuild
 
