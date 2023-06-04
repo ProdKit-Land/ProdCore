@@ -9,10 +9,11 @@
 // a collection of values, or a complex data structure. Actors can access and consume this 
 // data when they receive updates.
 
-// Callback: A fallback mechanism provides a way to handle scenarios where an Actor is not present 
+// Callback: A callback mechanism provides a way to handle scenarios where an Actor is not present 
 // or cannot receive updates. It ensures that data changes are handled appropriately even in 
 // the absence of certain Actors. This can be achieved through default values, error handling, 
-// or alternative update strategies.
+// or alternative update strategies. Callbacks can also be used to perform
+// additional operations or specific operations when an event is triggered.
 
 // The Hub (mediator-observable) is the source of data or state changes and the hub 
 // for controlling communications. It maintains a list of actors and notifies them when 
