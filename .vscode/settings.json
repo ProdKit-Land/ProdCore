@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+    "**/bundle": true
+  },
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "conventionalCommits.scopes": [
+    "demo",
+    "docs"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
