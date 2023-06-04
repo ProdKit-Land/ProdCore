@@ -20,7 +20,7 @@ export abstract class ReactiveHub implements Hub {
   }
 
   async notifyActors(event: string, data?: unknown, callback?: () => void): Promise<void> {
-    await Promise.all(this.actors.map((actor) => actor.onEvent(event, data)));
+    await Promise.all(this.actors.map((actor) => actor.onEvent(event, data, callback)));
   }
 
 }
