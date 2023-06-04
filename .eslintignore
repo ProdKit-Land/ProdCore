@@ -1,0 +1,8 @@
+/*.d.ts
+/*.js
+/demo/
+/examples/
+/internal/
+/service-worker/
+/shared/
+/test/
