@@ -1,4 +1,4 @@
-import { Hub, Actor } from './reactive.js';
+import { Hub, Actor } from './hub-actor.js';
 
 export abstract class ReactiveHub implements Hub {
 
