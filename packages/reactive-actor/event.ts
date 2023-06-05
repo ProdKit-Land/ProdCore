@@ -5,4 +5,4 @@
 
 // Common Signals: onEvent(signal: Signal, slot: () => void): void; 
 // Our way: onEvent(signal: Signal, data?: Data, slot?: () => void): void;
-// Our way: notifyActors(event: Singal, data?: Data, callback?: () => void | Promise<void>): void | Promise<void>;
+// Our way: notifyActors(event: Signal, data?: Data, callback?: () => void | Promise<void>): void | Promise<void>;
