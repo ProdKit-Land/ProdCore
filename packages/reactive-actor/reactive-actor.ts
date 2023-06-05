@@ -29,7 +29,7 @@ export abstract class ReactiveActor extends HTMLElement implements Actor {
     return Promise.resolve();
   }
 
-  sendEvent(event: string, data?: unknown, callback?: (() => void | Promise<void>) | undefined): void | Promise<void> {
+  sendEvent(event: string, data?: unknown, callback?: () => void): void | Promise<void> {
     for (const hub of this.hubs) {
       hub.notifyActors(event, data, callback);
     }
