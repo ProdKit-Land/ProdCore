@@ -86,7 +86,7 @@ export const defaultConverter: AttributeConverter = {
 // property 
 //------------------------------------
 export interface PropertyValidator<Type> { (value: Type): boolean; }
-export interface PropertySanitizer<Type> { (value: Type): boolean; }
+export interface PropertySanitizer<Type> { (value: unknown): unknown; }
 export interface PropertySerializer<Type> { (value: Type): unknown; }
 export interface PropertyDeserializer<Type> { (value: unknown): Type; }
 
