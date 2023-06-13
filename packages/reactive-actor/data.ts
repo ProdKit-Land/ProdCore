@@ -36,13 +36,13 @@ export const defaultConverter: AttributeConverter = {
       case BigInt:
       case Symbol:
       case Function:
-        toValue = value.toString();
+        toValue = value.toString(); 
         break;
       case Object:
       case Array:
       case Map:
       case Set:
-        toValue = JSON.stringify(value);
+        toValue = JSON.stringify(value); // TODO: include efficient approaches 
         break;
       // case Date:
       //   toValue = (value as Date).toISOString();
@@ -70,7 +70,7 @@ export const defaultConverter: AttributeConverter = {
       case Array:
       case Map:
       case Set:
-        fromValue = JSON.stringify(value);
+        fromValue = JSON.stringify(value); // TODO: include efficient approaches 
         break;
       // case Date:
       //   fromValue = new Date(value);
@@ -85,10 +85,10 @@ export const defaultConverter: AttributeConverter = {
 //------------------------------------
 // property 
 //------------------------------------
-export interface PropertyValidator<Type> { (value: Type): boolean; }
-export interface PropertySanitizer<Type> { (value: unknown): unknown; }
-export interface PropertySerializer<Type> { (value: Type): unknown; }
-export interface PropertyDeserializer<Type> { (value: unknown): Type; }
+export interface PropertyValidator<Type, TypeHint> { (value: Type, type?: TypeHint): boolean; }
+export interface PropertySanitizer<Type, TypeHint> { (value: Type, type?: TypeHint): unknown; }
+export interface PropertySerializer<Type, TypeHint> { (value: Type, Type?: TypeHint): unknown; }
+export interface PropertyDeserializer<Type, TypeHint> { (value: Type, type?: TypeHint): Type; }
 
 export interface PropertyOption<Type = unknown, TypeHint = unknown> {
   readonly name: PropertyKey;
@@ -98,10 +98,10 @@ export interface PropertyOption<Type = unknown, TypeHint = unknown> {
   readonly attribute?: boolean | string;
   readonly default?:  boolean | string;
   readonly reflect?: boolean;
-  readonly validate?: PropertyValidator<Type>;
-  readonly sanitize?: PropertySanitizer<Type>;
-  readonly serialize?: PropertySerializer<Type>;
-  readonly deserialize?: PropertyDeserializer<Type>;
+  readonly validate?: PropertyValidator<Type, TypeHint>;
+  readonly sanitize?: PropertySanitizer<Type, TypeHint>;
+  readonly serialize?: PropertySerializer<Type, TypeHint>;
+  readonly deserialize?: PropertyDeserializer<Type, TypeHint>;
 }
 
 export type PropertyValues<Type = unknown> = Type extends object ? Map<PropertyKey, unknown> : never;
