@@ -16,7 +16,7 @@ Using a document fragment to create and modify elements before appending them to
 2. Colne `HTMLTemplateElement` "once", and apply changes on `DocumentFragment`
 
 ```js
-const iterations = 10000; // Number of iterations for the test
+const iterations = 1000; // Number of iterations for the test
 
 // Approach 1: Directly modify HTMLTemplateElement and clone
 function approach1() {
